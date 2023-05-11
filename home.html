@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyPortal - MyPortalV5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/site.css" />
+    <link rel="stylesheet" href="./css/headerfooter.css" />
+    <link rel="stylesheet" href="./css/autochooser.css" />
+    <!-- <link rel="stylesheet" href="/MyPortalV5.styles.css?v=YIf4AY__PZA1TCOyVZEt2sI-R-y_Ze9plkunFCfvInY" /> -->
+    <link rel="stylesheet" href="./css/tui-pagination.css" />
+    <link rel="stylesheet" href="./css/tui-date-picker.css" />
+    <link rel="stylesheet" href="./css/tui-grid.css" />
+    <link rel="stylesheet" href="./css/toastui-chart.min.css" />
+    <link rel="stylesheet" href="./css/jquery.multiselect.css" />
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style>
+        .boxDisplayCell {
+            background-color: white;
+        }
+    </style>
+    <script src="
+    https://cdn.jsdelivr.net/npm/@polymer/font-roboto@3.0.2/roboto.min.js
+    "></script>
+    <script src="https://cdn.jsdelivr.net/npm/@polymer/iron-icons@3.0.1/util/concat-svg.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@polymer/paper-icon-button@3.0.2/paper-icon-button.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        
+    <link rel="stylesheet" href="./css/bootstrap-side-modals.css">
+    
+    <link rel="stylesheet" href="./css/home.css" />
+
+</head>
+<body>
+    <div class="modal modal-left fade" id="left_modal_sm" tabindex="-1" role="dialog" aria-labelledby="left_modal_sm">
+        <div class="modal-dialog modal-sm" role="document">
+          <div class="modal-content" style="border-top-right-radius: 20px; border-bottom-right-radius: 20px;">
+            <div class="modal-header">
+              <h5 class="modal-title">My Center Nav</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <br />
+                <div class="row  drawer-row">
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/corporatecenter/default.aspx"  style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/corporatecenter.png">
+                            <span style="text-align: center; font-size: 13px;">Corporate Center</span>
+                             </a>
+                        </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/employeecenter/default.aspx"   style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/employeecenter.png">
+                            <span style="text-align: center; font-size: 13px;">Employee Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/salescenter/pages/MySalesWorkbench.aspx"   style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/salescenter.png">
+                            <span style="text-align: center; font-size: 13px;">Sales Center</span>
+                        </a>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row  drawer-row">
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/insidesalescenter/pages/SalesDashboard.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/insidesalescenter.png">
+                            <span style="text-align: center; font-size: 13px;">Inside Sales Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/LearningCenter/pages/LearningCalendarList.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/trainingcenter.png">
+                            <span style="text-align: center; font-size: 13px;">Learning Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/internalsupportcenter/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/internalsupportcenter.png">
+                            <span style="text-align: center; font-size: 13px;">Internal Support</span>
+                        </a>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row  drawer-row">
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/Shipments.aspx"  style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/shipping.png">
+                            <span style="text-align: center; font-size: 13px;">Shipping &amp; Receiving</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/marketingcenter/cardorders.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img style="width: 35px; background-color: #c9dae5; height: 35px; border: 1px solid #c9dae5; border-radius: 80px;" src="./images/homeicons/marketingcenter.png">
+                            <span style="text-align: center; font-size: 13px;">Marketing Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/PurchasingCenter/pages/PurchaseDashboardNew.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/fulfillmentcenter.png">
+                            <span style="text-align: center; font-size: 13px;">Purchasing Center</span>
+                        </a>
+                    </div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row  drawer-row">
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/customercenter/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/customer_center.png">
+                            <span style="text-align: center; font-size: 13px;">Customer Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/suppliercenter/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/supplycenter.png">
+                            <span style="text-align: center; font-size: 13px;">Supplier Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item"><a href="https://MyPortal.EandM.com/projectcenter/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                        <img src="./images/homeicons/projectcenter.png">
+                        <span style="text-align: center; font-size: 13px;">Project Center</span>
+                    </a></div>
+                  </div>
+                  <br />
+                  <br />
+                  <div class="row  drawer-row">
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/engineercenter/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/engineeringcenter.png" />
+                            <span style="text-align: center; font-size: 13px;">Engineering Center</span>
+                        </a>
+                    </div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.com/financecenter/pages/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                        <img src="./images/homeicons/financecenter.png" />
+                        <span style="text-align: center; font-size: 13px;">Finance Center</span>
+                    </a></div>
+                    <div class="col-sm-4 drawer-item">
+                        <a href="https://MyPortal.EandM.comhttps://hrintranet.eandm.com/hr/default.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                            <img src="./images/homeicons/hrcenter.png" />
+                            <span style="text-align: center; font-size: 13px;">Human Resources</span>
+                        </a>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div class="modal-footer modal-footer-fixed" style="border-bottom-right-radius: 20px;">
+                <a href="https://MyPortal.EandM.com/configurationcenter/homePage.aspx" style="display: flex; align-items: center; justify-content: center; flex-direction:column;">
+                    <img src="./images/homeicons/myeandmconfigcenter.png">
+                    <span style="font-size: 12px;">Settings</span>
+                </a>
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    <header class="pageHeader" id="app-bar">
+        <div b-2jrzhdapnw class="pageHeaderContainer">
+            <div class="headLogoContainer">
+    <a href="https://myportal.eandm.com/"><img src="./images/logo-EandM-MyPortal.png" alt="EandM MyPortal" /></a>
+</div>
+            <div>
+    <h1>MyPortal</h1>
+    <!-- <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-right">
+        <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" data-toggle="modal" data-target="#left_modal_sm">menu</button>
+      </section> -->
+</div>
+ <div class="siteAlertContainer">
+    <span id="siteAlertText"></span>
+    <div class="siteAlertMessages">
+        <ul id="siteAlertMessageList"></ul>
+    </div>
+    <div id="siteAlertDisplay" class="siteAlertDisplay"></div>
+</div>
+            <div class="headLinks">
+    <a href="https://myportal.eandm.com/EmployeeCenter/Pages/PhoneDirectory.aspx">Phone Directory</a>
+</div>
+                <div style="background-color: yellow;">!DEV Database!</div>
+
+            <div class="headSearchContainer">
+
+    <form method="get" action="https://myportal.eandm.com/searchCenter/generalSearch.aspx">
+        Search:
+        <input type="text" data-val="true" data-val-required="The Search field is required." id="Search" name="Search" value="" /><button>Go</button>
+    </form>
+</div>
+            <div style="flex-grow: 0">
+    <div class="headSideNavSwitch">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div id="headUserInfo" class="headUserInfo" onclick="document.getElementById('chooseUserToImpersonate').style.display='block';">
+    <div>Chris Mason</div>
+    <div>Web eveloper</div>
+            <span style="display: none;" class="autoChooserContainer" id="chooseUserToImpersonate" data-config='{"ChooserType":"Employee","SearchTriggerLength":0,"NumberOfRowsAbove":6,"NumberOfRowsBelow":9,"CurrentRowIndex":0,"CurrentText":"","DefaultText":"<div>Type {0} characters to start search.</div><div>Use up/down arrows or mouse wheel to scroll results.</div><div>Press Enter or click result to accept or ESC to Cancel.</div>","ClientAcceptCallback":"impersonateUser","InitialText":"","InitialId":0,"ParentId":0,"CustomSearchMode":"Impersonation"}'><input class="autoChooserInput" data-val-autochooser="You must select a Employee" id="chooseUserToImpersonate_input" name="chooseUserToImpersonate_input" placeholder="Choose Employee" type="text" value="" /><input class="autoChooserHidden" id="chooseUserToImpersonate_hidden" name="chooseUserToImpersonate_hidden" type="hidden" value="" /><div class="autoChooserResults"><div class="autoChooserResultRow autoChooserShowDetail"><div class="autoChooserResultDetail"><div>Type 0 characters to start search.</div><div>Use up/down arrows or mouse wheel to scroll results.</div><div>Press Enter or click result to accept or ESC to Cancel.</div></div></div></div></span>
+</div>
+        </div>
+    </header>
+
+ 
+    <div class="siteHistoryContainer" style="display: flex;">
+        <button id="drawerToggle" style="width: 35px; height: 35px; border-radius: 60px; padding: 2px;" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" data-toggle="modal" data-target="#left_modal_sm">menu</button>
+        <span class="globalNavSwitch">
+           
+            <!-- <img src="./images/salesicons/icon-nav-collapse.png" /> -->
+        </span>
+    <span style="margin-top: 8px; margin-left: 10px;">Site History:</span>
+        <a style="margin-top:8px;" href="#"><span >Home Page</span></a>
+</div>
+
+
+    <nav class="siteNavigationContainer">
+        <div>
+            <ul class=" level0">
+                <!-- <li class="siteTabRight">
+                    <button style="width: 40px; height: 40px;" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button" data-toggle="modal" data-target="#left_modal_sm">menu</button>
+                </li> -->
+                <li class="siteTab tabOpen tabActive">
+                    <a href="#" >Home</a>
+                </li>
+                <li class="siteTab">
+                    <a href="#" >Sales Center</a>
+                </li>
+                <li class="siteTab">
+                    <a href="#" >Employee Center</a>
+                </li>
+                <li class="siteTab">
+                    <a href="#" >Shipping Center</a>
+                </li>
+                <li class="siteTab">
+                    <a href="#" >Inside Sales Center</a>
+                </li>
+                <li class="siteTab">
+                    <a href="#" >Search</a>
+                </li>
+               
+            </ul>
+        </div>
+    </nav>
+
+    <nav class="sideNavContainer">
+        <div>
+            <img src="./images/logo-EandM-MyPortal.png" style="width: 40px;" />
+        </div>
+<div>
+<ul class="sideNavList level0">
+<li class="sideNavItem tabOpen tabActive"><a href="#" >Home</a></li>
+<li class="sideNavItem"><a href="#" class="sideNavSwitch">Sales Center</a><ul class="sideNavList level1">
+<li class="sideNavItem"><a href="#" class="sideNavSwitch">Sales Workspace</a><ul class="sideNavList level2">
+<li class="sideNavItem"><a href="#" >Today</a></li>
+<li class="sideNavItem"><a href="#" >Leads</a></li>
+<li class="sideNavItem"><a href="#" >Targets</a><ul class="sideNavList level3">
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Opportunities</a><ul class="sideNavList level3">
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Flow</a><ul class="sideNavList level3">
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Forecast</a></li>
+<li class="sideNavItem"><a href="#" >Sales Performance</a><ul class="sideNavList level3">
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Accounts</a></li>
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" class="sideNavSwitch">Sales Reports</a>
+    <ul class="sideNavList level2">
+        <li class="sideNavItem"><a href="#" >Quotes</a></li>
+        <li class="sideNavItem"><a href="#" >Orders</a></li>
+        <li class="sideNavItem"><a href="#" >Shipments</a></li>
+        <li class="sideNavItem"><a href="#" >Sales by Supplier</a></li>
+        <li class="sideNavItem"><a href="https://myportal.eandm.com/salescenter/pages/customerSales.aspx" >Shipments by Customer</a></li>
+        <li class="sideNavItem"><a href="https://myportal.eandm.com/salesCenter/pages/ProductsPurchased.aspx" >Purchased Items</a></li>
+        <li class="sideNavItem"><a href="https://myportal.eandm.com/salesCenter/pages/techSupportInquiries.aspx" >Technical Inquiries</a></li>
+</ul>
+</li>
+<li class="sideNavItem"><a href="https://myportal.eandm.com/salesCenter/pages/myActivities.aspx" >Activities and Leads</a></li>
+<li class="sideNavItem"><a href="https://myportal.eandm.com/salesCenter/pages/ManageSalesPeople.aspx" >Administration</a></li>
+<li class="sideNavItem"><a href="https://myportal.eandm.com/SalesCenter/pages/ClosedLeadsReport.aspx" >Management Reports</a></li>
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Employee Center</a></li>
+<li class="sideNavItem"><a href="#" >Shipping Center</a></li>
+<li class="sideNavItem"><a href="#" class="sideNavSwitch">Inside Sales Center</a><ul class="sideNavList level1">
+<li class="sideNavItem"><a href="#" >Inside Sales Home</a></li>
+<li class="sideNavItem"><a href="#" >Item Steal</a></li>
+</ul>
+</li>
+<li class="sideNavItem"><a href="#" >Search</a></li>
+</ul>
+</div>
+</nav>
+    
+    <main b-2jrzhdapnw class="pageMain main-content">
+        <div b-2jrzhdapnw class="pageMainContainer">
+            <div>
+    <h1>MyPortal</h1>
+</div>
+ 
+<div class="homePageTiles">
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/corporatecenter/default.aspx">
+                <img src="./images/homeicons/corporatecenter.png">
+                <span>Corporate Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/Shipments.aspx">Shipping Info</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/pages/companyCalendar.aspx">Company Calendar</a></li>
+                <li><a href="https://MyPortal.EandM.comhttps://eandm.atsondemand.com/index.cfm#/">Current Job Openings</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/employeecenter/default.aspx">
+                <img src="./images/homeicons/employeecenter.png">
+                <span>Employee Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/TimeTracking/TimeSummary.aspx">Enter Hours Worked</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/DayTracking/EmployeeTimeOffDetail.aspx">Request Time Off</a></li>
+                <li><a href="https://MyPortal.EandM.com/Employeecenter/BenefitPlans.aspx">View My Benefits</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/Preferences/SalesNotifications.aspx">Set MyPortal Preferences</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/Benefits/BenefitsOverview.aspx">Benefits Overview</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/pages/ExpenseReports.aspx">Enter Expenses</a></li>
+                <li><a href="https://MyPortal.EandM.com/EmployeeCenter/pages/PhoneDirectory.aspx">Phone Directory</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/salescenter/pages/MySalesWorkbench.aspx">
+                <img src="./images/homeicons/salescenter.png">
+                <span>Sales Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/salescenter/pages/openorders.aspx">Open Orders</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/myPipeline.aspx">Sales Pipeline</a></li>
+                <li><a href="https://MyPortal.EandM.com/salescenter/pages/leadsManagement.aspx">Lead Management</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/myActivities.aspx">My Activities</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/MySalesWorkbench.aspx">Salesperson Workbench</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/myOrders.aspx">My Orders</a></li>
+                <li><a href="https://MyPortal.EandM.com/SalesCenter/pages/CampaignWorkbench.aspx">Campaign Management</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/myQuotes.aspx">My Quotes</a></li>
+                <li><a href="https://MyPortal.EandM.com/salesCenter/pages/myShipments.aspx">My Shipments</a></li>
+                <li><a href="https://MyPortal.EandM.com/MobileMyEandM/">Download MobileMyEandM</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/insidesalescenter/pages/SalesDashboard.aspx">
+                <img src="./images/homeicons/insidesalescenter.png">
+                <span>Inside Sales Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/orderconfirms.aspx">Order Confirmations</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/quoteActivity.aspx">Quote Activity</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/pendingquotes.aspx">Quotes Pending Approval</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/SalesOpsDashboard.aspx">Sales Ops At a Glance</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/default.aspx">Inside Sales Workbench</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/SalesDashboard.aspx">Sales Opps Dashboard</a></li>
+                <li><a href="https://MyPortal.EandM.com/insidesalescenter/pages/OpenOrders.aspx">Past Due Open Orders</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/projectcenter/default.aspx">
+                <img src="./images/homeicons/projectcenter.png">
+                <span>Project Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.comhttp://team.intranet.eandm.com/serra/Knowledge%20Base/Home.aspx">Serra WIKI</a></li>
+                <li><a href="https://MyPortal.EandM.com/projectcenter/pages/openengineeringorders.aspx">Open Engineering Orders</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/LearningCenter/pages/LearningCalendarList.aspx">
+                <img src="./images/homeicons/trainingcenter.png">
+                <span>Learning Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/LearningCenter/pages/HolidayRegistration.aspx">RSVP to the Mardi Gras Party!</a></li>
+                <li><a href="https://MyPortal.EandM.com/LearningCenter/pages/LearningCalendarList.aspx">Events Schedule</a></li>
+                <li><a href="https://MyPortal.EandM.comhttps://www.eandm.com/TrainingEvaluation/Default.aspx">Access Public Site Training Evaluation</a></li>
+                <li><a href="https://MyPortal.EandM.com/LearningCenter/pages/LearningCalendar.aspx">Calendar View of Events</a></li>
+                <li><a href="https://MyPortal.EandM.com/LearningCenter/pages/ManageTrainingRegistrations.aspx">Manage Training Registrations</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/internalsupportcenter/default.aspx">
+                <img src="./images/homeicons/internalsupportcenter.png">
+                <span>Internal Support Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/internalsupportcenter/viewissuetype.aspx?issuetype=1">Internal Support</a></li>
+                <li><a href="https://MyPortal.EandM.com/internalsupportcenter/viewissuetype.aspx?issuetype=4">SFA</a></li>
+                <li><a href="https://MyPortal.EandM.com/internalsupportcenter/viewissuetype.aspx?issuetype=2">MyPortal</a></li>
+                <li><a href="https://MyPortal.EandM.comhttp://team.intranet.eandm.com/it/How%20Tos/Forms/AllItems.aspx">Frequently Asked Questions (VPN / IT)</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/techsupportcenter/default.aspx">
+                <img src="./images/homeicons/techsupportcenter.png">
+                <span>Tech Support Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/uploadsupportfile.aspx">Upload Support File</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/motorshop/default.aspx">
+                <img src="./images/homeicons/motorshopcenter.png">
+                <span>Motor Works Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/motorshop/windingcalculationsnew/default.aspx">Winding Calculations</a></li>
+                <li><a href="https://MyPortal.EandM.com/motorshop/pages/MonthlyInspection.aspx">Monthly Inspection Checklist</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/engineercenter/default.aspx">
+                <img src="./images/homeicons/engineeringcenter.png">
+                <span>Engineering Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/engineercenter/viewservicelogs.aspx">Service Logs</a></li>
+                <li><a href="https://MyPortal.EandM.com/engineercenter/viewremotesptrecs.aspx">Remote Support</a></li>
+                <li><a href="https://MyPortal.EandM.comhttp://team.intranet.eandm.com/Engineering%20Procedures/Forms/AllItems.aspx">Engineering Procedures</a></li>
+                <li><a href="https://MyPortal.EandM.comhttp://team.intranet.eandm.com/serra/Knowledge%20Base/Home.aspx">Serra Wiki</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/configurationcenter/homePage.aspx">
+                <img src="./images/homeicons/myeandmconfigcenter.png">
+                <span>Configuration Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.comhttps://hrintranet.eandm.com/hr/default.aspx">
+                <img src="./images/homeicons/hrcenter.png">
+                <span>Human Resources</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/SafetyCenter/default.aspx">
+                <img src="./images/homeicons/safetycenter.png">
+                <span>Health &amp; Safety Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/outlookintegrationcenter/default.aspx">
+                <img src="./images/homeicons/outlookintegrationcenter.png">
+                <span>Outlook Integration Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/myenm/synccenter/companycontacts.aspx">Contacts</a></li>
+                <li><a href="https://MyPortal.EandM.com/myenm/synccenter/suppliercontacts.aspx">Suppliers</a></li>
+                <li><a href="https://MyPortal.EandM.com/myenm/synccenter/usercontacts.aspx">Employees</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/financecenter/pages/default.aspx">
+                <img src="./images/homeicons/financecenter.png">
+                <span>Finance Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/financecenter/pages/pandl.aspx">P and L Report</a></li>
+                <li><a href="https://MyPortal.EandM.comhttp://team.intranet.eandm.com/accounting">Accounting Procedures and Calendar</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/administrationcenter/Organizations.aspx">
+                <img src="./images/homeicons/admincenter.png">
+                <span>Administration Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/myenm/administrationcenter/SPRanalysis.aspx">SPR Analysis</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/ecommercecenter/default.aspx">
+                <img src="./images/homeicons/ecommercecenter.png">
+                <span>Ecommerce Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/marketingcenter/cardorders.aspx">
+                <img src="./images/homeicons/marketingcenter.png">
+                <span>Marketing Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/SalesCenter/pages/SalesLitDrillDown.aspx?sales_lit_id=1031">2022 Calendar Stats</a></li>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/ManageSalesLitGroups.aspx">Manage Sales Literature</a></li>
+                <li><a href="https://MyPortal.EandM.com/marketingcenter/pages/CreateEditPromotions.aspx">Marketing Promotions</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/customercenter/default.aspx">
+                <img src="./images/homeicons/customer_center.png">
+                <span>Customer Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/searchCenter/mapSearch.aspx">Map Search</a></li>
+                <li><a href="https://MyPortal.EandM.com/searchCenter/SiteSearch.aspx">Search Contacts by Location</a></li>
+                <li><a href="https://MyPortal.EandM.com/CustomerCenter/CreateEditCompany.aspx">Create New Company</a></li>
+                <li><a href="https://MyPortal.EandM.com/customercenter/default.aspx">Search Customers</a></li>
+                <li><a href="https://MyPortal.EandM.com/searchCenter/CreateContactList.aspx">Create Contact List</a></li>
+                <li><a href="https://MyPortal.EandM.com/CustomerCenter/UploadEmailUnsubscribes.aspx">Marketing Email Unsubscribes</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/suppliercenter/default.aspx">
+                <img src="./images/homeicons/supplycenter.png">
+                <span>Supplier Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/SupplierCenter/CreateEditSupplier.aspx">Create Supplier</a></li>
+                <li><a href="https://MyPortal.EandM.com/SupplierCenter/Pages/SupplierDirectory.aspx">Supplier Directory</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/PurchasingCenter/pages/PurchaseDashboardNew.aspx">
+                <img src="./images/homeicons/fulfillmentcenter.png">
+                <span>Purchasing Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/PurchasingCenter/pages/PurchaseDashboardNew.aspx">Purchasing Workbench</a></li>
+                <li><a href="https://MyPortal.EandM.com/PurchasingCenter/pages/InvoiceMismatches.aspx">Invoice Mismatch</a></li>
+                <li><a href="https://MyPortal.EandM.com/PurchasingCenter/pages/CertificateHistory.aspx">Varian Procedures</a></li>
+                <li><a href="https://MyPortal.EandM.com/PurchasingCenter/pages/RMAListing.aspx">RMAs</a></li>
+                <li><a href="https://MyPortal.EandM.com/PurchasingCenter/pages/KitManagement.aspx">Kit Management</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/Shipments.aspx">
+                <img src="./images/homeicons/shipping.png">
+                <span>Shipping &amp; Receiving Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/Shipments.aspx">Shipments</a></li>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/ReleaseOrders.aspx">Release Orders</a></li>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/OpenSOReport_new.aspx">Open Sales Orders</a></li>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/Pages/KitWorkbench.aspx">Build Kits</a></li>
+                <li><a href="https://MyPortal.EandM.com/ShippingReceivingCenter/pages/ReceivePO.aspx?ReceiveType=PO">Receive PO&#x27;s</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/AccountsPayableCenter/pages/ApproveExpensesForImport.aspx">
+                <img src="./images/homeicons/accountsPayable.png">
+                <span>Accounts Payable Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/AccountsPayableCenter/pages/ApproveExpensesForImport.aspx">Expense Reimbursements</a></li>
+                <li><a href="https://MyPortal.EandM.com/AccountsPayableCenter/pages/ApproveCCExpensesForImport.aspx">Corporate Credit Card Expenses</a></li>
+                <li><a href="https://MyPortal.EandM.com/AccountsPayableCenter/pages/DirectDepositNotification.aspx">Direct Deposits</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/AccountsReceivableCenter/pages/ManagePreAuthorizations.aspx">
+                <img src="./images/homeicons/accountsReceivable.png">
+                <span>Accounts Receivable Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/AccountsReceivableCenter/pages/ImportSalesTax.aspx">Sales Tax Verification</a></li>
+                <li><a href="https://MyPortal.EandM.com/AccountsReceivableCenter/pages/ManagePreAuthorizations.aspx">Manage Pre Authorizations</a></li>
+                <li><a href="https://MyPortal.EandM.com/AccountsReceivableCenter/pages/CollectionsActions.aspx">Collection Actions</a></li>
+                <li><a href="https://MyPortal.EandM.com/AccountsReceivableCenter/pages/ProcessInvoices.aspx">Process Customer Invoices</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/RenewalCenter/pages/default.aspx">
+                <img src="./images/homeicons/supportcontractscenter.png">
+                <span>Renewal Center</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.com/RenewalCenter/pages/SupportItems.aspx">Manage Support Items</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.com/default.aspx">
+                <img src="./images/homeicons/salescenter.png">
+                <span>Third Party Tools</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.comhttps://azureeandm.sharepoint.com/sites/Wonderwa/SitePages/Shared-Page.aspx">SharePoint WWCA</a></li>
+                <li><a href="https://MyPortal.EandM.comhttps://www.lucidchart.com">Lucidchart</a></li>
+                <li><a href="https://MyPortal.EandM.comhttps://app.smartsheet.com/b/home">Smartsheet</a></li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div>
+            <a href="https://MyPortal.EandM.comhttps://myportal4.eandm.com/SalesCenter/SalesWorkspace">
+                <img src="./images/homeicons/">
+                <span>EandM Sales Workspace</span>
+            </a>
+        </div>
+        <div>
+            <ul>
+                <li><a href="https://MyPortal.EandM.comhttps://myportal4.eandm.com/SalesCenter/SalesWorkspace">Today</a></li>
+                <li><a href="https://MyPortal.EandM.comhttps://myportal4.eandm.com/SalesCenter/SalesReports/QuoteList">Quotes</a></li>
+                <li><a href="https://MyPortal.EandM.com/https://myportal4.eandm.com/SalesCenter/SalesReports/OrderList">Orders</a></li>
+                <li><a href="https://MyPortal.EandM.com/https://myportal4.eandm.com/SalesCenter/SalesReports/ShipmentList">Shipments</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </main>
+    <footer b-2jrzhdapnw class="pageFooter">
+        <div b-2jrzhdapnw class="pageFooterContainer">
+            &copy; 2023 - MyPortalV5 - <a href="#">Privacy</a>
+        </div>
+    </footer>
+
+    <script src="./lib/jquery/dist/jquery.min.js"></script>
+    <script src="./lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/autoChooser.jquery.js"></script>
+    <script src="./js/autoSaver.jquery.js"></script>
+    <script src="./js/autoConfirm.jquery.js"></script>
+    <script src="./js/autoFilter.jquery.js"></script>
+    <script src="./js/site.js"></script>
+    <script src="./js/siteAlerts.js"></script>
+
+    <script src="./js/autoChooser.js"></script>
+    <script src="./js/autoConfirm.js"></script>
+    <script src="./js/autoFilter.js"></script>
+    <script src="./js/tui-grid-support.js"></script>
+    <script src="./lib/toastui/xlsx.full.min.js"></script>
+    <script src="./lib/toastui/tui-pagination.js"></script>
+    <script src="./lib/toastui/tui-date-picker.js"></script>
+    <script src="./lib/toastui/tui-grid.js"></script>
+    <script src="./lib/toastui/toastui-chart.min.js"></script>
+    <script src="./lib/multiselect/jquery.multiselect2.js"></script>
+    <script>
+        // const drawer =  mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-drawer'));
+        // const listEl = document.querySelector('.mdc-drawer .mdc-list');
+        // const mainContentEl = document.querySelector('.main-content');
+
+        // listEl.addEventListener('click', (event) => {
+        // drawer.open = false;
+        // });
+
+        // document.body.addEventListener('MDCDrawer:closed', () => {
+        // mainContentEl.querySelector('input, button').focus();
+        // });
+            
+        tui.Grid.applyTheme('default', {
+            selection: {
+                background: '#4daaf9',
+                border: '#004082'
+            },
+            row: {
+                even: {
+                    background: '#e4edf6'
+                },
+                hover: {
+                    background: '#ffffe0'
+                }
+            },
+            cell: {
+                normal: {
+                    background: '#fbfbfb',
+                    border: '#ccc',
+                    showHorizontalBorder: true,
+                    showVerticalBorder: true
+                },
+                header: {
+                    background: '#eeeeee',
+                    border: '#ccc',
+                    showVerticalBorder: true,
+                    showHorizontalBorder: true
+                },
+                rowHeader: {
+                    border: '#ccc',
+                    showVerticalBorder: true,
+                    showHorizontalBorder: true
+                },
+                selectedHeader: {
+                    background: '#d8d8d8'
+                },
+                focused: {
+                    border: '#418ed4'
+                }
+            }
+        });
+
+        $('.multiselectAutofilter').multiselect({
+            columns: 1,
+            maxWidth: 400,
+            clearAll: true,
+            texts: {
+                placeholder: 'Any',
+            }
+        });
+    </script>
+    
+    
+
+<script src="./_framework/aspnetcore-browser-refresh.js"></script>
+
+</body>
+</html>
