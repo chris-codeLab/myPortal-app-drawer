@@ -1,0 +1,185 @@
+/* new autochooser design */
+
+.autoChooserContainer {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}
+.autoChooserInput {
+    width: 250px;
+    position: relative;
+    transition: width .2s linear;
+}
+input[type=text].autoChooserInput {
+    background-color: #fdffe4;
+}
+.autoChooserResults {
+    position: absolute;
+    top: 0px;
+    width: 250px;
+    height: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    background-color: #cccccc;
+    
+    transition: height .2s linear, top .2s linear, width .2s linear;
+    z-index: 20;
+}
+/* show */
+.autoChooserContainer.show > .autoChooserResults {
+    top: -100px;
+    width: 350px;
+    height: 300px;
+    border: solid 1px #cccccc;
+}
+.autoChooserContainer.show > .autoChooserInput {
+    width: 335px;
+    z-index: 21;
+}
+
+.autoChooserResultRow {
+    border-bottom: solid 1px #cccccc;
+    background-color: #efefef;
+}
+.autoChooserResultRow:hover {
+    background-color: #fdffe4;
+    cursor: pointer;
+}
+.autoChooserResultRow:first-child {
+    margin-top: 100px;
+}
+
+.autoChooserResultRow:last-child {
+    margin-bottom: 150px;
+}
+.autoChooserResultRow > span {
+    height: 25px;
+    line-height: 25px;
+    padding-left: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.autoChooserResultRow > .autoChooserResultDetail {
+    min-height: 0;
+    max-height: 0;
+    overflow: hidden;
+    background-color: #cefecc;
+    padding: 0px 5px;
+    font-size: 13px;
+}
+
+.autoChooserResultRow.autoChooserShowDetail {
+    padding-top: 26px;
+    background-color: #cefecc;
+    border: solid 1px black;
+}
+.autoChooserResultRow.autoChooserShowDetail > span {
+    font-weight: bold;
+}
+/*.autoChooserResultRow:hover > .autoChooserResultDetail*/
+.autoChooserResultRow.autoChooserShowDetail > .autoChooserResultDetail {
+    min-height: 20px;
+    max-height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* old autochooser design */
+/*.autoChooserContainer {
+    position: relative;
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+}
+
+
+
+.autoChooserInput {
+    position: relative;
+    width: 250px;
+    transition: width 0.3s ease-in-out;
+}
+
+input[type=text].autoChooserInput {
+    background-color: #fffee5;
+}
+
+.autoChooserDetails,
+.autoChooserUpper,
+.autoChooserLower {
+    position: absolute;*/
+/*display: none; this prevents the transition */
+/*flex-direction: column;
+    overflow: hidden;
+    z-index: 1;
+    width: 250px;
+    height: 0px;
+    background-color: white;
+    border: 0;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 20;
+}
+
+.autoChooserDetails {
+    background-color: #d9f5fe;
+}
+
+.autoChooserUpper {
+    bottom: 31px;
+    max-height: 0px;
+}
+
+.autoChooserLower {
+    top: 110px;
+    min-height: 0px;
+}
+
+.autoChooserContainer.show .autoChooserInput {
+    z-index: 2;
+    width: 500px;
+}
+.autoChooserContainer.show .autoChooserDetails,
+.autoChooserContainer.show .autoChooserUpper,
+.autoChooserContainer.show .autoChooserLower {
+    display: flex;
+    width: 500px;
+    border: solid 1px black;
+    opacity: 1;
+}
+
+.autoChooserContainer.show .autoChooserDetails {
+    height: 80px;
+}
+.autoChooserContainer.show .autoChooserUpper {
+    height: auto;
+    max-height: 500px;
+}
+.autoChooserContainer.show .autoChooserLower {*/
+/*height: 200px;*/
+/*min-height: 150px;
+    height: auto;
+}
+
+.autoChooserResultRow {
+    background-color: #fffee5;
+    border-bottom: solid 1px black;
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    padding: 3px;
+}
+.autoChooserResultRow:hover {
+    background-color: #fffa81;
+}*/
